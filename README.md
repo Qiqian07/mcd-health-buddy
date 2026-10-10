@@ -10,6 +10,13 @@
 
 一句话：**先讲营养，再算优惠。**
 
+## 👥 目标用户
+
+- **热量管理人群**：减脂期、健身期仍想吃麦当劳，需要知道"这顿到底多少卡"
+- **高蛋白需求者**：训练日想优先补足蛋白质，同时控制钠摄入
+- **精打细算的麦门信徒**：既想吃得健康，又不想放弃优惠券和积分羊毛
+- **懒得比对的人**：不想在 App 里来回切换查营养、翻卡包、算积分，希望一句话搞定
+
 ## ✨ 核心功能
 
 | 功能 | 说明 | 用到的 MCP 工具 |
@@ -87,7 +94,7 @@
 }
 ```
 
-将 `YOUR_MCP_TOKEN` 替换为你的实际 Token。详细接入说明见 [docs/MCP接入说明.md](docs/MCP接入说明.md)。
+将 `YOUR_MCP_TOKEN` 替换为你的实际 Token（仓库内 `mcp-config.example.json` 为脱敏示例，仅含环境变量占位符）。详细接入与调用流程见 [MCP_INTEGRATION.md](MCP_INTEGRATION.md)。
 
 ### 3. 安装本 Skill
 
@@ -99,14 +106,16 @@
 
 ```text
 mcd-health-buddy/
-├── SKILL.md                  # Skill 本体（WorkBuddy Skill 规范）
-├── README.md                 # 本文件（项目介绍）
+├── SKILL.md                   # 项目主体：Skill 本体（WorkBuddy Skill 规范）
+├── README.md                  # 项目介绍、安装方法、使用示例、目标用户
+├── CONTEST_DECLARATION.md     # 参赛声明（官方原文件，内容未改动）
+├── MCP_INTEGRATION.md         # MCP 接入说明：使用的 Server、Tool、调用流程与业务价值
+├── mcp-config.example.json    # 脱敏后的 MCP 配置示例（仅环境变量占位符）
+├── workbuddy.md               # WorkBuddy 开发对话上下文（专项奖励核验用）
 ├── docs/
-│   ├── MCP接入说明.md        # 麦当劳官方 MCP Server 接入教程
-│   └── 参赛声明.md           # 参赛声明
-├── submissions/
-│   └── issue-报名内容.md     # 按官方 Issue 模板填写的报名内容
-└── 开发对话记录.md           # 使用腾讯 WorkBuddy 开发的完整对话记录
+│   └── images/                # 实测演示截图
+└── submissions/
+    └── issue-报名内容.md      # 按官方 Issue 模板填写的报名内容
 ```
 
 ## 🛠 技术说明
@@ -121,7 +130,9 @@ mcd-health-buddy/
 - 大赛：麦当劳程序员创意开发大赛（2026.10.9 10:30 — 10.25 23:59）
 - 官方 MCP 仓库：[M-China/mcd-mcp-server](https://github.com/M-China/mcd-mcp-server)
 - 开发工具：腾讯 WorkBuddy（[workbuddy.cn](https://www.workbuddy.cn/)）
-- 参赛声明见 [docs/参赛声明.md](docs/参赛声明.md)
+- 活动主页：[M-China/mcd-developer-innovation-challenge](https://github.com/M-China/mcd-developer-innovation-challenge)
+- 参赛声明见 [CONTEST_DECLARATION.md](CONTEST_DECLARATION.md)
+- WorkBuddy 开发对话上下文见 [workbuddy.md](workbuddy.md)
 
 ## 📄 License
 
